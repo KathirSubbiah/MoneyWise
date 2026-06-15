@@ -1,0 +1,425 @@
+/* =========================
+   Global Styles
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+}
+
+
+/* =========================
+   Main Container
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  background: #151515;
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+
+/* Logo */
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-title img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.logo-title h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+
+/* Profile Icon */
+
+.profile-icon {
+  width: 55px;
+  height: 55px;
+  background: #1d1d1d;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-icon:hover {
+  background: #2a2a2a;
+  transform: scale(1.08);
+}
+
+
+/* =========================
+   Headings
+========================= */
+
+h2 {
+  color: #e5e5e5;
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   Balance Section
+========================= */
+
+.balance-container {
+  background: #202020;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.balance-container h1 {
+  font-size: 3rem;
+  margin: 15px 0;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.income,
+.expenses {
+  background: #111;
+  padding: 20px;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.income:hover,
+.expenses:hover {
+  transform: translateY(-5px);
+}
+
+.income h3,
+.income p {
+  color: #22c55e;
+}
+
+.expenses h3,
+.expenses p {
+  color: #ef4444;
+}
+
+.income p,
+.expenses p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+
+/* =========================
+   Financial Goals
+========================= */
+
+.goal-container {
+  background: #202020;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+}
+
+.goal-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+#goal-message {
+  margin-top: 20px;
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #3b82f6;
+  text-align: center;
+}
+
+
+/* =========================
+   Main Content
+========================= */
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+
+/* =========================
+   Transaction Section
+========================= */
+
+#transaction-list {
+  list-style: none;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+#transaction-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+#transaction-list::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+.transaction {
+  background: #1d1d1d;
+  margin-bottom: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  border-left: 4px solid;
+  transition: 0.3s;
+}
+
+.transaction:hover {
+  background: #292929;
+  transform: translateX(5px);
+}
+
+.transaction.income {
+  border-left-color: #22c55e;
+}
+
+.transaction.expense {
+  border-left-color: #ef4444;
+}
+
+.transaction-date {
+  color: #888;
+  font-size: 0.75rem;
+  margin-top: 5px;
+}
+
+
+/* =========================
+   Search
+========================= */
+
+.search-box {
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  width: 100%;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+.form-container {
+  background: #202020;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ddd;
+  font-weight: 500;
+}
+
+
+/* Inputs */
+
+input {
+  width: 100%;
+  padding: 12px;
+  background: #101010;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #777;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+
+/* =========================
+   Toggle Buttons
+========================= */
+
+.toggle-container {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px;
+  background: #111;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.toggle-btn:hover {
+  background: #252525;
+}
+
+.income-active {
+  background: #22c55e;
+  border-color: #22c55e;
+}
+
+.expense-active {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button[type="submit"]:hover {
+  background: #cccccc;
+}
+
+.edit-btn,
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
+.edit-btn {
+  color: #3b82f6;
+}
+
+.delete-btn {
+  color: #ef4444;
+}
+
+
+/* Small Text */
+
+small {
+  color: #888;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 900px) {
+
+  .main-content,
+  .summary,
+  .goal-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  #transaction-list {
+    max-height: 300px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .container {
+    padding: 15px;
+  }
+
+  .logo-title img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-title h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .balance-container h1 {
+    font-size: 2.3rem;
+  }
+
+}
